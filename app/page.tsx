@@ -7,9 +7,6 @@ import { Avatar } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
-// import cv_img  from "@/components/image/cv_pics.jpg";
-import cv_img from "@/components/image/cv_pics.jpg";
-
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("about");
@@ -50,8 +47,21 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-background to-secondary">
+      <header className="sticky top-0 bg-white bg-opacity-50 backdrop-blur-md shadow-md z-50">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center items-center h-16">
+            <div className="flex space-x-4">
+              <a href="#intro" className="text-gray-900 hover:text-gray-700">Intro</a>
+              <a href="#about" className="text-gray-900 hover:text-gray-700">About Me</a>
+              <a href="#skills" className="text-gray-900 hover:text-gray-700">Skills</a>
+              <a href="#projects" className="text-gray-900 hover:text-gray-700">Projects</a>
+              <a href="#contact" className="text-gray-900 hover:text-gray-700">Contact Me</a>
+            </div>
+          </div>
+        </nav>
+      </header>
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center text-center px-4">
+      <section id="intro"  className="relative h-screen flex items-center justify-center text-center px-4">
         <div className="space-y-6">
           <Avatar className="w-32 h-32 mx-auto">
           <img src="https://media-hosting.imagekit.io//b7de7ea7b07a4320/cv%20pics.jpg?Expires=1834331782&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=iolXPDnlbt6lIKuHERPM6fHsFjBjn5BLHVCaEnbl1XDL~DLqz0bw-TetLNzu-yXkwRlq~aH~6Vzb5LOUDfvRPX~EEnEGRdqslFBYzRwkGKc949SeDIP-XbQYTMTZrppBAstog6NBHdavYLWYJtpAMG01VSzP~SN4Ufc1ZbeIrUN7SXOz4ldQDzwYF-UFLOoqaLh7j3Eb8vqIA5R82n61B64J4d~dYdPKd92gMti99S1A0vSyH6t7QpUcYWV7VVwqOKLI-TD6lUBKqF8K7JX12QxBlTdDv2~jbGRb1O9cMiWcqy3SJ0ibfLXOCsEePIl~7ErpD4ukdSn65BvbrskLdg__" alt="Kowreesan" className="w-full h-full object-cover" />
